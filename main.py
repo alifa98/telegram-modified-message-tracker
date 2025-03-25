@@ -50,8 +50,8 @@ async def handle_edit(event):
         user_link = f"[{chat_name}](tg://user?id={user.id})"
 
         notify_text = (f"✏️ **Message Edited** in chat with {user_link}:\n\n"
-                       f"**Original:** {original_text}\n"
-                       f"**Edited:** {new_text}")
+                       f"**Original:**\n{original_text}\n"
+                       f"**Edited:**\n{new_text}")
 
         await notify(notify_text)
 
@@ -66,7 +66,7 @@ async def handle_delete(event):
                 user_link = f"[{chat_name}](tg://user?id={user.id})"
 
                 notify_text = (f"🗑 **Message Deleted** in chat with {user_link}:\n\n"
-                               f"**Deleted message:** {deleted_text}")
+                               f"**Deleted message:**\n{deleted_text}")
 
                 await notify(notify_text)
                 break
